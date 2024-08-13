@@ -1,17 +1,43 @@
 /* Example CSS for App.css */
-
 .App {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.Header{
+.Header {
   background-color: #282c34;
-  padding: 1rem;
+  padding: 0; /* Remove padding to let the buttons fill the entire area */
   color: white;
   display: flex;
   justify-content: space-around;
+  align-items: stretch; /* Make sure the buttons stretch to fill the header height */
+  height: 60px; /* Set a fixed height for the header */
+}
+
+.Header button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  flex: 1; /* Make each button take up equal width */
+  height: 100%; /* Ensure buttons fill the height of the header */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Header button:focus {
+  outline: none;
+}
+
+.Header button:hover {
+  background-color: green; /* Add a hover effect */
+}
+
+.Header button.active {
+  border-bottom: 2px solid white;
 }
 
 .Footer {
@@ -58,6 +84,19 @@
 .Header button.active {
   border-bottom: 2px solid white;
 }
+
+.task-controls {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.task-controls select {
+  padding: 5px;
+  font-size: 16px;
+}
+
 
 .TaskList {
   flex: 1;

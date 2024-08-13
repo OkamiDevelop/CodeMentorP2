@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 
 
-function TaskForm({ task, onSave, onCancel }) {
+function TaskForm({ task, onSave, onCancel, onComplete }) {
   const [title, setTitle] = useState(task?.title || '');
   const [description, setDescription] = useState(task?.description || '');
   const [deadline, setDeadline] = useState(task?.deadline || new Date().toISOString().slice(0, 16));
@@ -20,6 +20,10 @@ function TaskForm({ task, onSave, onCancel }) {
     }
 
     onSave({ ...task, title, description, deadline, status: task?.status || 'pending' });
+  };
+
+  const handleComplete = () => {
+    onComplete({ ...task, title, description, deadline, status: 'completed' });
   };
 
   return (
@@ -44,6 +48,9 @@ function TaskForm({ task, onSave, onCancel }) {
       />
       <button onClick={handleSave}>Confirm</button>
       <button onClick={onCancel}>Cancel</button>
+      {task && task.status !== 'completed' && (
+          <button onClick={handleComplete}>Complete</button>
+        )}
     </div>
   );
 }
