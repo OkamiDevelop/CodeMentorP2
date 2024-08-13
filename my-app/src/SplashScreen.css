@@ -1,0 +1,26 @@
+/* src/SplashScreen.css */
+.SplashScreen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #282c34;
+    color: white;
+  }
+  
+  .SplashScreen-logo {
+    width: 100px;
+    height: 100px;
+    animation: spin infinite 20s linear;
+  }
+  
+  @keyframes spin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  

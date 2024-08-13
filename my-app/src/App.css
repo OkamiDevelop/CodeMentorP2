@@ -1,0 +1,123 @@
+/* Example CSS for App.css */
+
+.App {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.Header{
+  background-color: #282c34;
+  padding: 1rem;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.Footer {
+  background-color: #282c34;
+  padding: 0; /* Remove padding to let the button fill the entire area */
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px; /* Adjust height as needed */
+  width: 100%; /* Ensure the footer takes the full width of the page */
+  cursor: pointer;
+  margin-top: auto; /* Push the footer to the bottom */
+}
+
+.Footer-button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Footer-button:focus {
+  outline: none;
+}
+
+.Footer-button:hover {
+  background-color: green; /* Optional: Add a hover effect */
+}
+.Header button, .Footer button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.Header button.active {
+  border-bottom: 2px solid white;
+}
+
+.TaskList {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+}
+
+.TaskItem {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+.actions button {
+  margin-right: 0.5rem;
+}
+
+.EmptyState {
+  text-align: center;
+  color: #888;
+}
+
+/* src/App.css */
+
+.TaskForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem; /* Add space between form elements */
+  max-width: 400px; /* Optional: Limit the width of the form */
+  margin: 0 auto; /* Center the form on the page */
+}
+
+.TaskForm h2 {
+  text-align: center; /* Center the form title */
+}
+
+.TaskForm input,
+.TaskForm textarea {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; /* Make input fields fill the available width */
+}
+
+.TaskForm textarea {
+  resize: vertical; /* Allow vertical resizing of the textarea */
+}
+
+.TaskForm button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.TaskForm button:hover {
+  background-color: #0056b3;
+}
